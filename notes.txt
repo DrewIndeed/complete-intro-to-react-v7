@@ -58,8 +58,21 @@ run again with with "browserslist"
 
 === "last 2 Chrome versions" ===
 
-=== JXS ===
+=== JSX ===
 - Takes HTML and translate them into React.createElement calls, you dont have to worry about it
 - So it helps you to think in HTML, but you write in JS, and forget about the middle cognitive step
 - Do we need to explicitly import React from react? Actually no. Bc: it is used to be before the most recent version of React, the React JSX transforms from Babel. 
 - At this point, ESLint will give warnings about unused Components but they are beiong used
+
+=== Fix ESLINT for JSX ===
+- npm install -D eslint-plugin-import@2.25.4 eslint-plugin-jsx-a11y@6.5.1 eslint-plugin-react@7.28.0
+- Plugins:
+    + react: to comprehend what React is doing
+    + import: to work around logic imports, eslint only checks 1 file at the time, this allows eslist to check multiple files at the time
+    + a11y: accessibility, check things like are you putting alt on an image, are you not making buttons that are links?
+- Rules: 
+    + prop types: either use TypeScript or use nothing, it is used to be a package that can do some basic type validation
+    + react in jsx scope: stop warnings about not importing React from react when using jsx
+- Settings:
+    + react: bc React has changed over the years, need this for specifically the React plugin
+        + version = detect: look that the package and figure it out bruh
