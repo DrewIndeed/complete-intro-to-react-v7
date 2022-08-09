@@ -1,4 +1,4 @@
-=== About App and Components ===
+=== App and Components ===
 - It doesn't have to be called 'root', just a common practice.
 - React library script: the interface of how to interact with React; all the methods (except one) 
 will be via this library. It contains no way of rendering itself though; it's just the API.
@@ -14,6 +14,7 @@ This will go away in build version
 So how the data flows up? It doesn't. But how does that help? When something happens to App, I know that Pet does not
 do it bc Pet has no effect on App, so we can ignore the whole seciton of code -> Good for debugging.
 
+=== Prettier ===
 - To use prettier from terminal: npx prettier <filepath> --write
 - Turn on: format on save, prettier required config
 - Why enable prettier required config? It will only format the project with .prettierrc
@@ -21,6 +22,7 @@ do it bc Pet has no effect on App, so we can ignore the whole seciton of code ->
 or the library. That is why when we write scrips in package.json, it understands which folder to use when
 executing the command
 
+=== ESLint ===
 - prettier does not at your code and tell you what is wrong, it will handle that for you. Eslint will look at your
 code and tell you what is wrong with it.
 - npm i -D eslint@8.8.0 eslint-config-prettier@8.3.0
@@ -32,3 +34,16 @@ To see the errors got highlighted on VScode, download ESLint from Microsoft.
 - About prettier --check, this is usually used in Github pages, to tell people that have not formatted the files using
 Prettier, their build will be marked as failed. 
 - To run, npm run lint -- --fix
+
+=== Parcel ===
+- A bundler, like Webpack but much easier bc it just figures everything out by itself, not manually like Webpack.
+- npm i -D parcel@2.3.2 (at this point in 2.3.x)
+- npm i react@17.0.2 react-dom@17.0.2
+- Treeshaking: you only include the code that you use
+- Pedantic?, Pragmatic?
+- What a bundler: ship everything (new JS) down and make it compatible to browsers, especially older browsers. 
+They dont wtf is arrow function, etc. 
+
+=== Why not create-react-app ===
+- Because cra drops you at step 14 and you dont know how you got there :)) Dont start with a functioning dev env.
+Start to feel the pain of why we do something in a way. Know the tool to solve the pain that we experience.
