@@ -20,3 +20,15 @@ do it bc Pet has no effect on App, so we can ignore the whole seciton of code ->
 - About the .bin directory in node_modules, it contains the binary reference to the actually folder of the package 
 or the library. That is why when we write scrips in package.json, it understands which folder to use when
 executing the command
+
+- prettier does not at your code and tell you what is wrong, it will handle that for you. Eslint will look at your
+code and tell you what is wrong with it.
+- npm i -D eslint@8.8.0 eslint-config-prettier@8.3.0
+- "eslint": "^8.8.0" -> notice the ^ -> it means that if there is 8.3.1, go grab it. If you remove it, npm will
+grab the exact version that yoiu specify
+- Have you ever had conflicts between pretrier and eslint? If happens, follow prettier. 
+- After config of .eslintrc.json, npx eslint src/App.js. It will give tons of errors that do not follow eslint rules.
+To see the errors got highlighted on VScode, download ESLint from Microsoft.
+- About prettier --check, this is usually used in Github pages, to tell people that have not formatted the files using
+Prettier, their build will be marked as failed. 
+- To run, npm run lint -- --fix
