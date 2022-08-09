@@ -47,3 +47,11 @@ They dont wtf is arrow function, etc.
 === Why not create-react-app ===
 - Because cra drops you at step 14 and you dont know how you got there :)) Dont start with a functioning dev env.
 Start to feel the pain of why we do something in a way. Know the tool to solve the pain that we experience.
+
+=== "last 2 Chrome versions" ===
+- Can be Firefox or anything
+- Why: we dont want to include regenerators. For really really old browsers, if you go at them, they will include
+things that are very hard to deal wit like polyfills, async/await, generators, ... which is a hug library and 
+very hard to deal with
+- If see this: regenerator not found -> delete your cache, delete dist directory, reinstall node_modules, and then,
+run again with with "browserslist"
