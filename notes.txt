@@ -55,3 +55,11 @@ things that are very hard to deal wit like polyfills, async/await, generators, .
 very hard to deal with
 - If see this: regenerator not found -> delete your cache, delete dist directory, reinstall node_modules, and then,
 run again with with "browserslist"
+
+=== "last 2 Chrome versions" ===
+
+=== JXS ===
+- Takes HTML and translate them into React.createElement calls, you dont have to worry about it
+- So it helps you to think in HTML, but you write in JS, and forget about the middle cognitive step
+- Do we need to explicitly import React from react? Actually no. Bc: it is used to be before the most recent version of React, the React JSX transforms from Babel. 
+- At this point, ESLint will give warnings about unused Components but they are beiong used
