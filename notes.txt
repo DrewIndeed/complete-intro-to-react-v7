@@ -9,3 +9,7 @@ components is like Honda has a line of cars called Civics. It's a whole line of 
 An instance of a Civic would be one individual car. It's a concrete instance of the Civic car line.
 - Will encounter this warning: react.development.js:245 Warning: Each child in a list should have a unique "key" prop.
 This will go away in build version
+
+- At this point, App is the parent of Pet, bc App is rendering Pet. So the data flows from App down to Pet via props.
+So how the data flows up? It doesn't. But how does that help? When something happens to App, I know that Pet does not
+do it bc Pet has no effect on App, so we can ignore the whole seciton of code -> Good for debugging.
