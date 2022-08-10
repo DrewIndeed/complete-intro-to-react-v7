@@ -82,3 +82,7 @@ run again with with "browserslist"
 - Everytime that you render your React component, it is like a snapshot of given this state and this props, my component will always look like this
 - State hooks are called in order
 - Rules of thumb: do not put them in loops, if statements
+
+=== useEffect: fetch pets ===
+- why using id for key is bad? Bc if 2 things swap, their indexes wont change, React will think that nothing changed but the problem is something did change
+- Use: // eslint-disable-line react-hooks/exhaustive-deps -> ignore the empty dependency array warning
