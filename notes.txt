@@ -76,3 +76,9 @@ run again with with "browserslist"
 - Settings:
     + react: bc React has changed over the years, need this for specifically the React plugin
         + version = detect: look that the package and figure it out bruh
+
+=== Search form component ===
+- Hooks are to add statefulness to UI
+- Everytime that you render your React component, it is like a snapshot of given this state and this props, my component will always look like this
+- State hooks are called in order
+- Rules of thumb: do not put them in loops, if statements

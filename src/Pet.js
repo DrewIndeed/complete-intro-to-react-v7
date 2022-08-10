@@ -1,5 +1,3 @@
-// import React from "react"; // you dont need this anymore, when you use JSX
-
 const Pet = (props) => {
   return (
     <div>
@@ -9,13 +7,5 @@ const Pet = (props) => {
     </div>
   );
 };
-
-// const Pet = (props) => {
-//   return React.createElement("div", {}, [
-//     React.createElement("h1", {}, props.name),
-//     React.createElement("h2", {}, props.breed),
-//     React.createElement("h3", {}, props.animal),
-//   ]);
-// };
 
 export default Pet;
