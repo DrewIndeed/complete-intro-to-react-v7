@@ -86,3 +86,15 @@ run again with with "browserslist"
 === useEffect: fetch pets ===
 - why using id for key is bad? Bc if 2 things swap, their indexes wont change, React will think that nothing changed but the problem is something did change
 - Use: // eslint-disable-line react-hooks/exhaustive-deps -> ignore the empty dependency array warning
+
+=== Custom hook ===
+- If you have serveral hooks in a row, and that can also be applied for another component, make custom hook
+- For example, if you have a city, you can create useZipCode to get that city zip code by providing the location
+- Why not using regular function but useEffect in a custom hook? 
+    + Bc you want the first render to go completely through from start to finish and not interrupted. So when it renders the first time, it renders an empty state, so that user sees something. The EFFECTS then are SCHEDULED to run immediately (relatively to human, cuz it runs in ms) afterwards. React will handle scheduling and then eventually evoke that. 
+    + Notice the dependency array. By doing this way, if dependent targets in the array change in the future, React knows to run these effects over and over again. Otherwise, we would do some sort of state tracking ourselves
+- NEVER EVER USE ALERT IN YOUR CODE, UNHOLY ABOMINATION OF CODE
+
+=== Handling user input ===
+- Catch form submit event is the easiest way to submit a form
+- Read more about React Supported Events
