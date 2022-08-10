@@ -1,7 +1,7 @@
 /*eslint-env browser*/
 import { useState, useEffect } from "react";
-import Pet from "./Pet";
 import useBreedList from "./useBreedList";
+import Results from "./Results";
 
 const ANIMALS = ["bird", "dog", "cat", "rabbit", "reptile"];
 
@@ -28,10 +28,12 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        requestPets();
-      }}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          requestPets();
+        }}
+      >
         <label htmlFor="location">
           Location
           <input
@@ -82,16 +84,7 @@ const SearchParams = () => {
         <button>Submit</button>
       </form>
 
-      {pets.map((pet) => {
-        return (
-          <Pet
-            key={pet.id}
-            name={pet.name}
-            animal={pet.animal}
-            breed={pet.breed}
-          />
-        );
-      })}
+      <Results pets={pets} />
     </div>
   );
 };

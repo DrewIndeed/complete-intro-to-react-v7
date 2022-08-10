@@ -98,3 +98,6 @@ run again with with "browserslist"
 === Handling user input ===
 - Catch form submit event is the easiest way to submit a form
 - Read more about React Supported Events
+
+=== Component Composition ===
+- 100 - 150 - 200 lines -> long component
