@@ -107,4 +107,8 @@ run again with with "browserslist"
 - DONT SHIP DEV MODE TO PRODUCTION
 - Dev bundle: 1.2 MB - Build bundle: 255 kB -> ~ 10x larger. 
     + How to get this? Dev at 1234, serve build at 3000. Open Network tab, reload both of them. Find the bundled index files, they are usually index.[hash].js. Check the sizes of them and you will see
-- 
+
+=== Strict Mode ===
+- Add additional checks that future proof your application
+- It's good to keep your team in line and not using legacy features or things that will be soon be deprecated
+- It does nothing in Production
