@@ -112,3 +112,15 @@ run again with with "browserslist"
 - Add additional checks that future proof your application
 - It's good to keep your team in line and not using legacy features or things that will be soon be deprecated
 - It does nothing in Production
+
+==== React Router ===
+- npm i react-router-dom@6.2.1
+- BrowserRouter: the parent component that governs all the internal state of the router
+- When do I wanna have multiple routers? For example, when you have a little helper on your website, you might want to have a router for that and a core router for your page. It is acutally uncommon.
+- Routes: like the Switch in older versions of React. It says that one of the route is going to be rendered at a time
+- Route: about path="/details/:id": 
+    + id is just a name.,it can be anything 
+    + it can be more than 1 trailing like :id, for exampke, :cat, :blabla, :andrew
+- Why Link but not <a>? Yup, the end result will be the same, but there are a lot of additional logic added to Link so that its relative path will always the same no matter which brower router context it belongs to
+- At the target page that you navigate to, you can access the params of the Browser Router context through useParams hook (Router v6). Try this: http://localhost:1234/details/literallyAnything -> :id will be literallyAnything
+- 
