@@ -101,3 +101,10 @@ run again with with "browserslist"
 
 === Component Composition ===
 - 100 - 150 - 200 lines -> long component
+
+=== Build for production ===
+- Use parcel build -> will automatically switch to NODE_ENV=production -> strip out all the dev tools -> smaller bundle size
+- DONT SHIP DEV MODE TO PRODUCTION
+- Dev bundle: 1.2 MB - Build bundle: 255 kB -> ~ 10x larger. 
+    + How to get this? Dev at 1234, serve build at 3000. Open Network tab, reload both of them. Find the bundled index files, they are usually index.[hash].js. Check the sizes of them and you will see
+- 

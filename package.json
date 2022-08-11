@@ -2,9 +2,10 @@
   "name": "complete-intro-to-react-v7",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "serve": "serve dist",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
@@ -28,7 +29,8 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "parcel": "^2.3.2",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "serve": "^14.0.1"
   },
   "dependencies": {
     "react": "^17.0.2",
