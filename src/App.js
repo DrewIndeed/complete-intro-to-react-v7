@@ -1,4 +1,3 @@
-/*eslint-env browser*/
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
 
